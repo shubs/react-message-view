@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # isomorphic500
 
 [Isomorphic500](https://isomorphic500.herokuapp.com) is a small isomorphic ([universal](https://medium.com/@mjackson/universal-javascript-4761051b7ae9)) web application featuring photos from [500px](http://500px.com).
@@ -255,3 +256,6 @@ debug.enable('isomorphic500')
 debug.disable()
 // then, refresh!
 ```
+=======
+# react-message-view
+>>>>>>> e2eca5d499ecf2911f140f7ef76909f890017021
