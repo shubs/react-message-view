@@ -9,8 +9,10 @@ import Immutable from "immutable";
 import NotFoundPage from "./pages/NotFoundPage";
 import ErrorPage from "./pages/ErrorPage";
 import LoadingPage from "./pages/LoadingPage";
+//import LoadingPage from "./pages/AppBar";
 
 import trackPageView from "./utils/trackPageView";
+
 
 if (process.env.BROWSER) {
   require("./style/Application.scss");
