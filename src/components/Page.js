@@ -3,10 +3,10 @@ import React, { Component, PropTypes } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-import {RefreshIndicator} from 'material-ui';
-
 let mui = require('material-ui');
 let ThemeManager = new mui.Styles.ThemeManager();
+
+import ConversationList from "../components/ConversationList";
 
 
 if (process.env.BROWSER) {
@@ -33,20 +33,25 @@ class Page extends Component {
     const { footer } = this.props;
 
     return (
+
       <div className="Page">
+
         <div className="Page-header">
           <NavBar />
         </div>
-<RefreshIndicator size={40} left={80} top={5} status="loading" />
 
         <div className="Page-body">
+          
+
           { this.props.children }
+
         </div>
 
         { footer &&
           <div className="Page-footer">
             <Footer />
           </div> }
+
 
       </div>
     );
