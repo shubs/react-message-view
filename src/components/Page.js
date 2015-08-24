@@ -3,11 +3,6 @@ import React, { Component, PropTypes } from "react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-let mui = require('material-ui');
-let ThemeManager = new mui.Styles.ThemeManager();
-
-import ConversationList from "../components/ConversationList";
-
 
 if (process.env.BROWSER) {
   require("../style/Page.scss");
@@ -22,13 +17,7 @@ class Page extends Component {
   static defaultProps = {
     footer: true
   }
-
-  getChildContext() { 
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    };
-  }
-
+  
   render() {
     const { footer } = this.props;
 
@@ -42,7 +31,6 @@ class Page extends Component {
 
         <div className="Page-body">
           
-
           { this.props.children }
 
         </div>
@@ -58,11 +46,6 @@ class Page extends Component {
   }
 
 }
-
-
-Page.childContextTypes = {
-  muiTheme: React.PropTypes.object
-};
 
 
 export default Page;

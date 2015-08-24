@@ -11,6 +11,8 @@ import HtmlHeadStore from "./stores/HtmlHeadStore";
 import IntlStore from "./stores/IntlStore";
 import PhotoStore from "./stores/PhotoStore";
 
+
+
 // Create the fluxible app using Application as root component
 const app = new Fluxible({ component: Application });
 

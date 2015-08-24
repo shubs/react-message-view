@@ -18,6 +18,10 @@ if (process.env.BROWSER) {
   require("./style/Application.scss");
 }
 
+let mui = require('material-ui');
+let ThemeManager = new mui.Styles.ThemeManager();
+
+
 // Wrap Application with the fluxible context.
 // PS. new to this syntax? Those are called "decorators", see
 // https://babeljs.io/docs/usage/experimental/
@@ -48,6 +52,18 @@ class Application extends Component {
     documentTitle: PropTypes.string
 
   }
+  static childContextTypes = {
+    muiTheme: React.PropTypes.object
+  };
+
+
+
+  getChildContext() { 
+    return {
+      muiTheme: ThemeManager.getCurrentTheme()
+    };
+  }
+
 
   componentDidUpdate(prevProps) {
     const { documentTitle, currentRoute } = this.props;

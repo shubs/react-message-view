@@ -3,6 +3,8 @@ import InitActions from "./pages/InitActions";
 
 import features from "./constants/features";
 
+import InboxPage from "./pages/InboxPage";
+import ConversationPage from "./pages/ConversationPage";
 import HomePage from "./pages/HomePage";
 import PhotoPage from "./pages/PhotoPage";
 import FeaturedPage from "./pages/FeaturedPage";
@@ -13,6 +15,18 @@ export default {
     path: "/",
     method: "get",
     handler: HomePage
+  },
+
+  inbox: {
+    path: "/featured/inbox/",
+    method: "get",
+    handler: InboxPage
+  },
+
+  conversation: {
+    path: "/featured/conversation/",
+    method: "get",
+    handler: ConversationPage
   },
 
   featured: {

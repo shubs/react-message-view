@@ -25,11 +25,10 @@ class ConversationList extends Component {
             <ListItem
               leftAvatar={<Avatar src="http://material-ui.com/images/kolage-128.jpg" />}
               primaryText="Jennifer"
-              rightIcon={<ActionInfo />}
               secondaryText={
                 <p>
                   1 Avril 2015<br/>
-                  Wish I could come, but I&apos;m out of town this weekend.
+                  Wish I could come, but Im out of town this weekend.
                 </p>
               }
               secondaryTextLines={2} />
