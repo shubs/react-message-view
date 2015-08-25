@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from "react";
 
-import {Paper, TextField,RaisedButton} from "material-ui";
 
 import Message from "../components/Message";
 
