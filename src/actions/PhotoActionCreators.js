@@ -41,7 +41,7 @@ const PhotoActionCreators = {
 
   loadConversation(context, { id, imageSize }, done) {
 
-    context.service.read("conversationaaaa", { id, imageSize }, { timeout: TIMEOUT },
+    context.service.read("conversation", { id, imageSize }, { timeout: TIMEOUT },
       (err, data) => {
         if (err) {
           return done(err);

@@ -27,7 +27,7 @@ export default {
     path: "/featured/conversation/:id",
     method: "get",
     handler: ConversationPage,
-    action: InitActions.photoPage
+    action: InitActions.ConversationPage
   },
 
   featured: {

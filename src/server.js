@@ -46,6 +46,7 @@ server.use(csurf({ cookie: true }));
 const fetchr = app.getPlugin("FetchrPlugin");
 fetchr.registerService(require("./services/photos"));
 fetchr.registerService(require("./services/photo"));
+fetchr.registerService(require("./services/conversation"));
 
 // Use the fetchr middleware (will enable requests from /api)
 
