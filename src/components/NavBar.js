@@ -33,23 +33,23 @@ class NavBar extends Component {
         </div>
         <div className="NavBar-links">
           {
-            features.map(feature => {
-              let className = "NavBar-link";
+            // features.map(feature => {
+            //   let className = "NavBar-link";
 
-              if (currentFeature === feature) {
-                className = `${className} ${className}--selected`;
-              }
+            //   if (currentFeature === feature) {
+            //     className = `${className} ${className}--selected`;
+            //   }
 
-              return (
-                <NavLink
-                  key={feature}
-                  className={className}
-                  routeName="featured"
-                  navParams={{feature: feature}}>
-                  <FormattedMessage message={`features.${feature}`} />
-                </NavLink>
-              );
-            })
+            //   return (
+            //     <NavLink
+            //       key={feature}
+            //       className={className}
+            //       routeName="featured"
+            //       navParams={{feature: feature}}>
+            //       <FormattedMessage message={`features.${feature}`} />
+            //     </NavLink>
+            //   );
+            // })
           }
         </div>
         <div className="NavBar-locales">

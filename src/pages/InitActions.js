@@ -1,6 +1,6 @@
 // Actions to run when the router matches a route. Used in app/routes.js
 
-import { loadFeaturedPhotos, loadPhoto } from "../actions/PhotoActionCreators";
+import { loadFeaturedPhotos, loadPhoto, loadConversation } from "../actions/PhotoActionCreators";
 
 const InitActions = {
 
@@ -12,6 +12,11 @@ const InitActions = {
   photoPage(context, route, done) {
     const id = route.getIn(["params", "id"]);
     context.executeAction(loadPhoto, { id }, done);
+  },
+
+  ConversationPage(context, route, done) {
+    const id = route.getIn(["params", "id"]);
+    context.executeAction(loadConversation, { id }, done);
   },
 
   // do not load something, just send an error in the callback

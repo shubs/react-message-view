@@ -37,6 +37,20 @@ const PhotoActionCreators = {
       }
 
     );
+  },
+
+  loadConversation(context, { id, imageSize }, done) {
+
+    context.service.read("conversationaaaa", { id, imageSize }, { timeout: TIMEOUT },
+      (err, data) => {
+        if (err) {
+          return done(err);
+        }
+        context.dispatch(Actions.LOAD_PHOTO_SUCCESS, data);
+        done();
+      }
+
+    );
   }
 
 };

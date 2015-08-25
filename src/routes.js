@@ -14,7 +14,7 @@ export default {
   home: {
     path: "/",
     method: "get",
-    handler: HomePage
+    handler: InboxPage
   },
 
   inbox: {
@@ -24,9 +24,10 @@ export default {
   },
 
   conversation: {
-    path: "/featured/conversation/",
+    path: "/featured/conversation/:id",
     method: "get",
-    handler: ConversationPage
+    handler: ConversationPage,
+    action: InitActions.photoPage
   },
 
   featured: {
