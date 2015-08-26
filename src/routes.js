@@ -14,13 +14,8 @@ export default {
   home: {
     path: "/",
     method: "get",
-    handler: InboxPage
-  },
-
-  inbox: {
-    path: "/featured/inbox/",
-    method: "get",
-    handler: InboxPage
+    handler: InboxPage,
+    action: InitActions.ConversationListPage
   },
 
   conversation: {

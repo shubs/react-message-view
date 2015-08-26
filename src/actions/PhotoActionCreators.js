@@ -51,6 +51,22 @@ const PhotoActionCreators = {
       }
 
     );
+  },
+
+  loadConversationList(context, { imageSize }, done) {
+
+    context.dispatch('TOTO_START')
+
+    context.service.read("conversationList", { imageSize }, { timeout: TIMEOUT },
+      (err, data) => {
+        if (err) {
+          return done(err);
+        }
+        context.dispatch('TOTO_DONE', data)
+        done();
+      }
+
+    );
   }
 
 };

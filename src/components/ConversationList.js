@@ -1,18 +1,24 @@
 import React, { PropTypes, Component } from "react";
 
+import connectToStores from 'fluxible-addons-react/connectToStores';
 import {List, ListItem, Avatar, ListDivider, ActionInfo} from "material-ui";
 import Conversationitem from "../components/Conversationitem"
-class ConversationList extends Component {
 
+@connectToStores(['TestStore'], (context, props) => ({
+    datas: context.getStore('TestStore').getDatas()
+}))
+class ConversationList extends Component {
   render() {
+    console.log('ConversationList', this.props.datas)
 
     return (
       <div className="ConversationList">
           <List subheader="Your conversations">
+
               
             <Conversationitem
               avatar="http://material-ui.com/images/kolage-128.jpg"
-              name="name"
+              name="Carla"
               date="date"
               text="ish I could come, but Im o"
             />

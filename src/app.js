@@ -10,6 +10,7 @@ import FeaturedStore from "./stores/FeaturedStore";
 import HtmlHeadStore from "./stores/HtmlHeadStore";
 import IntlStore from "./stores/IntlStore";
 import PhotoStore from "./stores/PhotoStore";
+import TestStore from "./stores/TestStore";
 
 
 
@@ -28,5 +29,6 @@ app.registerStore(FeaturedStore);
 app.registerStore(HtmlHeadStore);
 app.registerStore(IntlStore);
 app.registerStore(PhotoStore);
+app.registerStore(TestStore);
 
 export default app;

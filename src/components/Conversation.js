@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from "react";
 
-
 import Message from "../components/Message";
 
 class Conversation extends Component {

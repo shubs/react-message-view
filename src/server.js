@@ -47,6 +47,7 @@ const fetchr = app.getPlugin("FetchrPlugin");
 fetchr.registerService(require("./services/photos"));
 fetchr.registerService(require("./services/photo"));
 fetchr.registerService(require("./services/conversation"));
+fetchr.registerService(require("./services/conversationList"));
 
 // Use the fetchr middleware (will enable requests from /api)
 
